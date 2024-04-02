@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Synthetic data generation for CASA systems</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -56,17 +56,17 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://orcid.org/0000-0002-6777-3425" target="_blank">Daniel Hernández-Ferrándiz</a>,</span> <!-- <sup>*</sup> -->
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://orcid.org/0000-0002-7175-3371" target="_blank">Juan J. Pantrigo</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://orcid.org/0000-0002-9178-9224" target="_blank">Raul Cabido</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Universidad Rey Juan Carlos<br>Engineering Applications of Artificial Intelligence <sup>&#40;</sup>In revision<sup>&#41;</sup></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -95,7 +95,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/dhernandezgit/CASA" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -129,11 +129,11 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/tracking_demo.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Tracking demonstration on real miscroscopic images of boar sperm. 
       </h2>
     </div>
   </div>
@@ -148,7 +148,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Computer-Aided Sperm Analysis (CASA) systems play a critical role in diagnosing fertility issues. They are essential for treating infertility in humans and are equally valuable in the domain of domestic animal reproduction, where they support studies on sperm competition and wildlife semen assessment. However, a significant challenge is produced by the lack of publicly available datasets and the difficulties associated with sample labeling. In this paper, we propose a solution to address this challenge by introducing a synthetic data generation approach based on a parametric model. We demonstrate the effectiveness of our approach by successfully addressing two key sperm analysis tasks: sperm count and sperm motility assessment. Our proposed system utilizes synthetic data for training and is validated using real-world images from boar sperm. Experimental results obtained using a lightweight detection model show a mean average precision (mAP) of 84.3\%. Furthermore, the computational requirements of our solution are minimal, enabling its execution on embedded systems and facilitating its integration into professional CASA systems.
           </p>
         </div>
       </div>
@@ -165,30 +165,30 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/Synth.drawio.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Synthetic image with zoom detail.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/BB.drawio.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Labelling of real microscopic images.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/SyntheticGeneratorDiagram.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+         Diagram of the rendering process.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <img src="static/images/synth.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Synthetic image.
       </h2>
     </div>
   </div>
@@ -199,7 +199,7 @@
 
 
 
-
+<!-- 
 <!-- Youtube video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
@@ -281,7 +281,8 @@
       <pre><code>BibTex Code Here</code></pre>
     </div>
 </section>
-<!--End BibTex citation -->
+<!--End BibTex citation --> 
+-->
 
 
   <footer class="footer">
