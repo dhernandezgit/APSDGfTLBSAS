@@ -177,111 +177,149 @@
 </div>
 </section>
 
-<section class="section">
-<!-- CASA. -->
-<div class="columns is-centered">
-  <div class="column is-full-width">
-    <h2 class="title is-3">Synthetically-trained CASA System</h2>
-
-    <!-- Detection. -->
-    <h3 class="title is-4">Sperm count</h3>
-    <div class="content has-text-justified">
-      <p>
-        We have tested our synthetic dataset training lightweight detection models such as YOLOv5 to be able to count the total number of spermatozoa. This models are validated with real videos from  <i>BOSS</i>, with results of over 84% in mAP.
-      </p>
-    </div>
-    <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
-      <div class="item-1 item">
-        <table>
-          <tr>
-                <td>			
-                  <video class="det" autoplay controls muted loop>
-                  <source src="/static/videos/d1.mp4" type="video/mp4">
-                  </video>
-                </td>
-                <td>			
-                  <video class="det" autoplay controls muted loop>
-                  <source src="/static/videos/d2.mp4" type="video/mp4">
-                  </video>
-                </td>
-          </tr>
-        </table>
-      </div>
-      <div class="item-2 item">
-        <table>
-          <tr>
-                <td>			
-                  <video class="det" autoplay controls muted loop>
-                  <source src="/static/videos/d3.mp4" type="video/mp4">
-                  </video>
-                </td>
-                <td>			
-                  <video class="det" autoplay controls muted loop>
-                  <source src="/static/videos/d4.mp4" type="video/mp4">
-                  </video>
-                </td>
-          </tr>
-        </table>
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Synthetically-trained CASA System</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/d1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/d2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/d3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/d4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
-    <!--/ Detection. -->
-    <section class="section">
-    <!-- Tracking. -->
-    <h3 class="title is-4">Sperm motility</h3>
-    <div class="content has-text-justified">
-      <p>
-        To complete a real CASA system we use the previous detection to characterize the movement of each individual. The tracking is done with the well-known Kalman filter, obtaining a good and fast estimation of the postion and speed, with a MOTA of 80.5%. 
-      </p>
-    </div>
-    <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
-      <div class="item-1 item">
-        <table>
-          <tr>
-                <td>			
-                  <video class="track" autoplay controls muted loop>
-                  <source src="/static/videos/t1.mp4" type="video/mp4">
-                  </video>
-                </td>
-                <td>			
-                  <video class="track" autoplay controls muted loop>
-                  <source src="/static/videos/t2.mp4" type="video/mp4">
-                  </video>
-                </td>
-  
-          </tr>
-        </table>
-      </div>
-      <div class="item-2 item">
-        <table>
-          <tr>
-                <td>			
-                  <video class="track" autoplay controls muted loop>
-                  <source src="/static/videos/t3.mp4" type="video/mp4">
-                  </video>
-                </td>
-                <td>			
-                  <video class="track" autoplay controls muted loop>
-                  <source src="/static/videos/t4.mp4" type="video/mp4">
-                  </video>
-                </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    </section>
-    <!--/ Tracking. -->
-
   </div>
-</div>
-<!--/ CASA. -->
 </section>
+<!-- End video carousel -->
 
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>Under review</code></pre>
+<section class="section">
+  <!-- CASA. -->
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-3">Synthetically-trained CASA System</h2>
+
+      <!-- Detection. -->
+      <h3 class="title is-4">Sperm count</h3>
+      <div class="content has-text-justified">
+        <p>
+          We have tested our synthetic dataset training lightweight detection models such as YOLOv5 to be able to count the total number of spermatozoa. This models are validated with real videos from  <i>BOSS</i>, with results of over 84% in mAP.
+        </p>
+      </div>
+      <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
+        <div class="item-1 item">
+          <table>
+            <tr>
+                  <td>			
+                    <video class="det" autoplay controls muted loop>
+                    <source src="/static/videos/d1.mp4" type="video/mp4">
+                    </video>
+                  </td>
+                  <td>			
+                    <video class="det" autoplay controls muted loop>
+                    <source src="/static/videos/d2.mp4" type="video/mp4">
+                    </video>
+                  </td>
+            </tr>
+          </table>
+        </div>
+        <div class="item-2 item">
+          <table>
+            <tr>
+                  <td>			
+                    <video class="det" autoplay controls muted loop>
+                    <source src="/static/videos/d3.mp4" type="video/mp4">
+                    </video>
+                  </td>
+                  <td>			
+                    <video class="det" autoplay controls muted loop>
+                    <source src="/static/videos/d4.mp4" type="video/mp4">
+                    </video>
+                  </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!--/ Detection. -->
+
+      <!-- Tracking. -->
+      <h3 class="title is-4">Sperm motility</h3>
+      <div class="content has-text-justified">
+        <p>
+          To complete a real CASA system we use the previous detection to characterize the movement of each individual. The tracking is done with the well-known Kalman filter, obtaining a good and fast estimation of the postion and speed, with a MOTA of 80.5%. 
+        </p>
+      </div>
+      <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
+        <div class="item-1 item">
+          <table>
+            <tr>
+                  <td>			
+                    <video class="track" autoplay controls muted loop>
+                    <source src="/static/videos/t1.mp4" type="video/mp4">
+                    </video>
+                  </td>
+                  <td>			
+                    <video class="track" autoplay controls muted loop>
+                    <source src="/static/videos/t2.mp4" type="video/mp4">
+                    </video>
+                  </td>
+    
+            </tr>
+          </table>
+        </div>
+        <div class="item-2 item">
+          <table>
+            <tr>
+                  <td>			
+                    <video class="track" autoplay controls muted loop>
+                    <source src="/static/videos/t3.mp4" type="video/mp4">
+                    </video>
+                  </td>
+                  <td>			
+                    <video class="track" autoplay controls muted loop>
+                    <source src="/static/videos/t4.mp4" type="video/mp4">
+                    </video>
+                  </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!--/ Tracking. -->
     </div>
+  </div>
+  <!--/ CASA. -->
+  </section>
+
+  <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>Under review</code></pre>
+      </div>
 </section>
 <!--End BibTex citation --> 
 
