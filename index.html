@@ -146,132 +146,133 @@
 <!-- End paper abstract -->
 
 <section class="section">
-  <div class="columns is-centered">
+<div class="columns is-centered">
 
-    <!-- Real images. -->
-    <div class="column">
-      <div class="content">
-        <h2 class="title is-3">Read microscopic dataset</h2>
+  <!-- Real images. -->
+  <div class="column">
+    <h2 class="title is-3">Read microscopic dataset</h2>
+    <div class="columns is-centered">
+      <div class="column content">
         <p>
           We have collected a boar sperm dataset called <i>BOSS</i> gathered with the help of expert technicians. This images present hundreds of individuals, as boar sperm has a higher concentration than human sperm.
         </p>
         <img src="static/images/real.png" alt="Real sperm image" class="center"/> 
       </div>
     </div>
-    <!--/ Real Images. -->
+  </div>
+  <!--/ Real Images. -->
 
-    <!-- Matting. -->
-    <div class="column">
-      <h2 class="title is-3">Synthetic dataset</h2>
-      <div class="columns is-centered">
-        <div class="column content">
-          <p>
-            In order to avoid the process of labelling hundreds of heads, we have created a synthetic dataset. This dataset is generated through a parametric model characterized from the measurements of the composing elements.
-          </p>
-          <img src="static/images/synth.png" alt="Synthetic sperm image" class="center"/> 
-        </div>
-
+  <!-- Matting. -->
+  <div class="column">
+    <h2 class="title is-3">Synthetic dataset</h2>
+    <div class="columns is-centered">
+      <div class="column content">
+        <p>
+          In order to avoid the process of labelling hundreds of heads, we have created a synthetic dataset. This dataset is generated through a parametric model characterized from the measurements of the composing elements.
+        </p>
+        <img src="static/images/synth.png" alt="Synthetic sperm image" class="center"/> 
       </div>
     </div>
   </div>
+</div>
 
-  <!-- CASA. -->
-  <div class="columns is-centered">
-    <div class="column is-full-width">
-      <h2 class="title is-3">Synthetically-trained CASA System</h2>
+<!-- CASA. -->
+<div class="columns is-centered">
+  <div class="column is-full-width">
+    <h2 class="title is-3">Synthetically-trained CASA System</h2>
 
-      <!-- Detection. -->
-      <h3 class="title is-4">Sperm count</h3>
-      <div class="content has-text-justified">
-        <p>
-          We have tested our synthetic dataset training lightweight detection models such as YOLOv5 to be able to count the total number of spermatozoa. This models are validated with real videos from  <i>BOSS</i>, with results of over 84% in mAP.
-        </p>
-      </div>
-      <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
-        <div class="item-1 item">
-          <table>
-            <tr>
-                  <td>			
-                    <video class="det" autoplay controls muted loop>
-                    <source src="/static/videos/d1.mp4" type="video/mp4">
-                    </video>
-                  </td>
-                  <td>			
-                    <video class="det" autoplay controls muted loop>
-                    <source src="/static/videos/d2.mp4" type="video/mp4">
-                    </video>
-                  </td>
-    
-            </tr>
-          </table>
-        </div>
-        <div class="item-2 item">
-          <table>
-            <tr>
-                  <td>			
-                    <video class="det" autoplay controls muted loop>
-                    <source src="/static/videos/d3.mp4" type="video/mp4">
-                    </video>
-                  </td>
-                  <td>			
-                    <video class="det" autoplay controls muted loop>
-                    <source src="/static/videos/d4.mp4" type="video/mp4">
-                    </video>
-                  </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <br/>
-      <!--/ Detection. -->
-
-      <!-- Tracking. -->
-      <h3 class="title is-4">Sperm motility</h3>
-      <div class="content has-text-justified">
-        <p>
-          To complete a real CASA system we use the previous detection to characterize the movement of each individual. The tracking is done with the well-known Kalman filter, obtaining a good and fast estimation of the postion and speed, with a MOTA of 80.5%. 
-        </p>
-      </div>
-      <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
-        <div class="item-1 item">
-          <table>
-            <tr>
-                  <td>			
-                    <video class="track" autoplay controls muted loop>
-                    <source src="/static/videos/t1.mp4" type="video/mp4">
-                    </video>
-                  </td>
-                  <td>			
-                    <video class="track" autoplay controls muted loop>
-                    <source src="/static/videos/t2.mp4" type="video/mp4">
-                    </video>
-                  </td>
-    
-            </tr>
-          </table>
-        </div>
-        <div class="item-2 item">
-          <table>
-            <tr>
-                  <td>			
-                    <video class="track" autoplay controls muted loop>
-                    <source src="/static/videos/t3.mp4" type="video/mp4">
-                    </video>
-                  </td>
-                  <td>			
-                    <video class="track" autoplay controls muted loop>
-                    <source src="/static/videos/t4.mp4" type="video/mp4">
-                    </video>
-                  </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <!--/ Tracking. -->
-
+    <!-- Detection. -->
+    <h3 class="title is-4">Sperm count</h3>
+    <div class="content has-text-justified">
+      <p>
+        We have tested our synthetic dataset training lightweight detection models such as YOLOv5 to be able to count the total number of spermatozoa. This models are validated with real videos from  <i>BOSS</i>, with results of over 84% in mAP.
+      </p>
     </div>
+    <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
+      <div class="item-1 item">
+        <table>
+          <tr>
+                <td>			
+                  <video class="det" autoplay controls muted loop>
+                  <source src="/static/videos/d1.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>			
+                  <video class="det" autoplay controls muted loop>
+                  <source src="/static/videos/d2.mp4" type="video/mp4">
+                  </video>
+                </td>
+  
+          </tr>
+        </table>
+      </div>
+      <div class="item-2 item">
+        <table>
+          <tr>
+                <td>			
+                  <video class="det" autoplay controls muted loop>
+                  <source src="/static/videos/d3.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>			
+                  <video class="det" autoplay controls muted loop>
+                  <source src="/static/videos/d4.mp4" type="video/mp4">
+                  </video>
+                </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br/>
+    <!--/ Detection. -->
+
+    <!-- Tracking. -->
+    <h3 class="title is-4">Sperm motility</h3>
+    <div class="content has-text-justified">
+      <p>
+        To complete a real CASA system we use the previous detection to characterize the movement of each individual. The tracking is done with the well-known Kalman filter, obtaining a good and fast estimation of the postion and speed, with a MOTA of 80.5%. 
+      </p>
+    </div>
+    <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
+      <div class="item-1 item">
+        <table>
+          <tr>
+                <td>			
+                  <video class="track" autoplay controls muted loop>
+                  <source src="/static/videos/t1.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>			
+                  <video class="track" autoplay controls muted loop>
+                  <source src="/static/videos/t2.mp4" type="video/mp4">
+                  </video>
+                </td>
+  
+          </tr>
+        </table>
+      </div>
+      <div class="item-2 item">
+        <table>
+          <tr>
+                <td>			
+                  <video class="track" autoplay controls muted loop>
+                  <source src="/static/videos/t3.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>			
+                  <video class="track" autoplay controls muted loop>
+                  <source src="/static/videos/t4.mp4" type="video/mp4">
+                  </video>
+                </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!--/ Tracking. -->
+
   </div>
-  <!--/ CASA. -->
+</div>
+<!--/ CASA. -->
 </section>
 
 <!--BibTex citation -->
