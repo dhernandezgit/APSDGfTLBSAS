@@ -65,7 +65,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Universidad Rey Juan Carlos<br>Engineering Applications of Artificial Intelligence &#40;In revision&#41;</span>
+                    <span class="author-block">Universidad Rey Juan Carlos<br>Engineering Applications of Artificial Intelligence &#40;Under review&#41;</span>
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
@@ -115,15 +115,15 @@
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/tracking_demo.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Tracking demonstration on real miscroscopic images of boar sperm. 
-      </h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="hero-body">
+        <video class="det" autoplay controls muted loop>
+          <source src="/static/videos/t4.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Tracking demonstration on real miscroscopic images of boar sperm. 
+        </h2>
+      </div>
     </div>
   </div>
 </section>
@@ -137,7 +137,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Computer-Aided Sperm Analysis (CASA) systems play a critical role in diagnosing fertility issues. They are essential for treating infertility in humans and are equally valuable in the domain of domestic animal reproduction, where they support studies on sperm competition and wildlife semen assessment. However, the lack of publicly available datasets and the difficulties associated with data labelling constitute a significant challenge. In this paper, we propose a solution to address this challenge by introducing a synthetic data generation approach based on a parametric model. We demonstrate the effectiveness of our approach by successfully addressing two key sperm analysis tasks: sperm count and sperm motility assessment. Our proposed system uses synthetic data for training and is validated with real-world boar sperm images. The results obtained show a mean average precision (mAP) of 84.3\% for the sperm count task, and a multiple object tracking accuracy (MOTA) of 80.5\% for motility estimation task. Furthermore, the computational requirements of our solution are minimal, enabling its execution on embedded systems and facilitating its integration into professional CASA systems.          </p>
+            Computer-Aided Sperm Analysis (CASA) systems play a critical role in diagnosing fertility issues. They are essential for treating infertility in humans and are equally valuable in the domain of domestic animal reproduction, where they support studies on sperm competition and wildlife semen assessment. However, the lack of publicly available datasets and the difficulties associated with data labelling constitute a significant challenge. In this paper, we propose a solution to address this challenge by introducing a synthetic data generation approach based on a parametric model. We demonstrate the effectiveness of our approach by successfully addressing two key sperm analysis tasks: sperm count and sperm motility assessment. Our proposed system uses synthetic data for training and is validated with real-world boar sperm images. The results obtained show a mean average precision (mAP) of 84.3% for the sperm count task, and a multiple object tracking accuracy (MOTA) of 80.5% for motility estimation task. Furthermore, the computational requirements of our solution are minimal, enabling its execution on embedded systems and facilitating its integration into professional CASA systems.          </p>
         </div>
       </div>
     </div>
@@ -145,46 +145,132 @@
 </section>
 <!-- End paper abstract -->
 
+<div class="columns is-centered">
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/Synth.drawio.png" alt="MY ALT TEXT" class="center"/> 
-        <h2 class="subtitle has-text-centered">
-          Synthetic image with zoom detail.
-        </h2>
+  <!-- Real images. -->
+  <div class="column">
+    <div class="content">
+      <h2 class="title is-3">Read microscopic dataset</h2>
+      <p>
+        We have collected a boar sperm dataset called <i>BOSS</i> gathered with the help of expert technicians. This images present hundreds of individuals, as boar sperm has a higher concentration than human sperm.
+      </p>
+      <img src="static/images/real.png" alt="Real sperm image" class="center"/> 
+    </div>
+  </div>
+  <!--/ Real Images. -->
+
+  <!-- Matting. -->
+  <div class="column">
+    <h2 class="title is-3">Synthetic dataset</h2>
+    <div class="columns is-centered">
+      <div class="column content">
+        <p>
+          In order to avoid the process of labelling hundreds of heads, we have created a synthetic dataset. This dataset is generated through a parametric model characterized from the measurements of the composing elements.
+        </p>
+        <img src="static/images/synth.png" alt="Synthetic sperm image" class="center"/> 
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/BB.drawio.png" alt="MY ALT TEXT" class="center"/>
-        <h2 class="subtitle has-text-centered">
-          Labelling of real microscopic images.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/SyntheticGeneratorDiagram.png" alt="MY ALT TEXT" class="center"/>
-        <h2 class="subtitle has-text-centered">
-         Diagram of the rendering process.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/synth.png" alt="MY ALT TEXT" class="center"/>
-      <h2 class="subtitle has-text-centered">
-        Synthetic image.
-      </h2>
+
     </div>
   </div>
 </div>
-</div>
-</section>
-<!-- End image carousel -->
 
+<!-- CASA. -->
+<div class="columns is-centered">
+  <div class="column is-full-width">
+    <h2 class="title is-3">Synthetically-trained CASA System</h2>
+
+    <!-- Detection. -->
+    <h3 class="title is-4">Sperm count</h3>
+    <div class="content has-text-justified">
+      <p>
+        We have tested our synthetic dataset training lightweight detection models such as YOLOv5 to be able to count the total number of spermatozoa. This models are validated with real videos from  <i>BOSS</i>, with results of over 84% in mAP.
+      </p>
+    </div>
+    <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
+      <div class="item-1 item">
+        <table>
+          <tr>
+                <td>			
+                  <video class="det" autoplay controls muted loop>
+                  <source src="/static/videos/d1.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>			
+                  <video class="det" autoplay controls muted loop>
+                  <source src="/static/videos/d2.mp4" type="video/mp4">
+                  </video>
+                </td>
+  
+          </tr>
+        </table>
+      </div>
+      <div class="item-2 item">
+        <table>
+          <tr>
+                <td>			
+                  <video class="det" autoplay controls muted loop>
+                  <source src="/static/videos/d3.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>			
+                  <video class="det" autoplay controls muted loop>
+                  <source src="/static/videos/d4.mp4" type="video/mp4">
+                  </video>
+                </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br/>
+    <!--/ Detection. -->
+
+    <!-- Tracking. -->
+    <h3 class="title is-4">Sperm motility</h3>
+    <div class="content has-text-justified">
+      <p>
+        To complete a real CASA system we use the previous detection to characterize the movement of each individual. The tracking is done with the well-known Kalman filter, obtaining a good and fast estimation of the postion and speed, with a MOTA of 80.5%. 
+      </p>
+    </div>
+    <div id="comparison-carousel" class="carousel comparison-carousel has-text-centered" style="font-size: 25px">
+      <div class="item-1 item">
+        <table>
+          <tr>
+                <td>			
+                  <video class="track" autoplay controls muted loop>
+                  <source src="/static/videos/t1.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>			
+                  <video class="track" autoplay controls muted loop>
+                  <source src="/static/videos/t2.mp4" type="video/mp4">
+                  </video>
+                </td>
+  
+          </tr>
+        </table>
+      </div>
+      <div class="item-2 item">
+        <table>
+          <tr>
+                <td>			
+                  <video class="track" autoplay controls muted loop>
+                  <source src="/static/videos/t3.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td>			
+                  <video class="track" autoplay controls muted loop>
+                  <source src="/static/videos/t4.mp4" type="video/mp4">
+                  </video>
+                </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!--/ Tracking. -->
+
+  </div>
+</div>
+<!--/ CASA. -->
 
 
 <!--BibTex citation -->
